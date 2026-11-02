@@ -1,0 +1,58 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "orbita-agenda",
+  "account_id": "1f3ced9721f8add504ae942fc9c16fa6",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-10-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "triggers": {
+    "crons": [
+      "*/10 * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "MYSQL_DATABASE": "orbita",
+    "GROQ_MODEL": "openai/gpt-oss-20b",
+    "PUBLIC_ORIGIN": "https://orbita-agenda.jretanamendez.workers.dev"
+  },
+  "ratelimits": [
+    {
+      "name": "AUTH_LIMIT",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 20,
+        "period": 60
+      }
+    },
+    {
+      "name": "AI_LIMIT",
+      "namespace_id": "1002",
+      "simple": {
+        "limit": 10,
+        "period": 60
+      }
+    }
+  ],
+  "hyperdrive": [
+    {
+      "binding": "MYSQL",
+      "id": "b6718211179a4e8b99c96616c4eddc47",
+      "remote": true
+    }
+  ],
+  "preview_urls": false
+}

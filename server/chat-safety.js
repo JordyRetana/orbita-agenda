@@ -1,0 +1,2 @@
+// A model response is never evidence of a committed database write.
+export function claimsSaved(text){return /(?:he|ya|te he|acabo de)\s+(?:agregado|añadido|creado|guardado|programado|agendado|registrado)|(?:agregué|añadí|creé|guardé|programé|agendé)|(?:tarea|actividad|sesión|curso)\s+(?:ha sido|fue|está|quedó)\s+(?:agregad|cread|guardad|programad|agendad)|(?:agregad[oa]|guardad[oa]|programad[oa]|agendad[oa])\s+(?:correctamente|en tu|a tu|al calendario)|(?:ya está|ya quedó)\s+(?:en tu agenda|en el calendario|registrad|guardad)/i.test(text)}

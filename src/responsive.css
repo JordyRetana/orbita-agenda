@@ -1,0 +1,63 @@
+.edit-form,.edit-form label,.form-grid>*,.session-time-grid>*{min-width:0}
+.edit-form input[type=range]{display:block;width:100%;max-width:100%;margin:10px 0 18px;box-sizing:border-box}
+.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.edit-form input:not([type=range]):not([type=color]),.edit-form select,.edit-form textarea{max-width:100%;min-width:0;box-sizing:border-box}
+.session-content{container-type:inline-size}
+.session-time-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.session-modal .session-form .duration-control{display:grid;grid-template-columns:40px minmax(48px,1fr) 16px 40px;gap:2px;width:100%;min-width:0;padding:2px;align-items:center;overflow:hidden;min-height:48px}
+.session-modal .session-form .duration-control>button{width:40px;height:42px;min-width:0;margin:0;padding:0;display:grid;place-items:center;line-height:1;touch-action:manipulation}
+.session-modal .session-form .duration-control>input:not([type=range]):not([type=color]){width:100%;min-width:0;max-width:100%;padding:5px 0;margin:0;min-height:40px;border:0;border-radius:0;background:transparent;text-align:center;font-size:16px;font-variant-numeric:tabular-nums;box-shadow:none}
+.session-modal .session-form .duration-control>span{margin:0;padding:0;text-align:center;font-size:12px;line-height:1}
+.session-duration>label{display:block;margin-bottom:9px!important;line-height:20px;color:#666975}
+.session-time-grid>label>span{min-height:20px;line-height:20px}
+.icon-button,.add-round,.color-check,.check-circle,.avatar{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;line-height:1;padding:0}
+.icon-button>svg,.add-round>svg,.duration-control button>svg,.color-check>svg{display:block;margin:0;flex-shrink:0}
+.icon-button{min-width:30px;min-height:30px;padding:5px}
+.mini-title>div,.period-buttons{display:flex;align-items:center;flex-shrink:0}
+.mini-grid>button,.weekday>b,.mobile-week>button>b,.month-day-number{display:flex;align-items:center;justify-content:center;padding:0;line-height:1;font-variant-numeric:tabular-nums}
+.mini-grid>button{justify-self:center;align-self:center;flex-shrink:0}
+.weekday>b{flex-shrink:0}
+.segment>button,.today-button{display:flex;align-items:center;justify-content:center;line-height:1.3}
+.primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;vertical-align:middle;line-height:1.35}
+.primary>svg{display:block;flex-shrink:0}
+.priority-pill,.session-priority summary>b{display:inline-flex;align-items:center;justify-content:center;line-height:1.2;font-variant-numeric:tabular-nums}
+.access-page .access-submit>span{display:flex;align-items:center;justify-content:center;top:0;bottom:0;line-height:1}
+.settings-modal .availability-form input[type=time],.settings-modal .availability-form input[type=number]{display:block;width:100%;min-width:0;min-height:48px;padding:12px 13px;margin:8px 0 17px;line-height:1.4;font-variant-numeric:tabular-nums;box-sizing:border-box}
+.settings-modal .availability-form>h3{line-height:1.4;margin-bottom:7px}
+.settings-modal .availability-form .secondary{line-height:1.6;margin:0 0 20px}
+.settings-modal .availability-form .form-grid{column-gap:16px;align-items:start}
+.settings-modal .availability-form label{line-height:1.5}
+.settings-modal .availability-form input::-webkit-date-and-time-value{min-width:0;text-align:left}
+.settings-modal .settings-info .native-row{display:flex;align-items:center;width:100%;gap:10px;line-height:1.5}
+.session-course{display:grid;grid-template-columns:7px minmax(0,1fr) auto;align-items:start;gap:8px;line-height:1.5}
+.session-course>span:first-child{margin-top:5px}
+.session-course .session-course-name{width:auto;height:auto;border-radius:0;min-width:0;overflow-wrap:anywhere;margin:0}
+.session-course>small{margin:0;white-space:nowrap;align-self:start}
+.session-modal .session-end{clear:both;line-height:1.5;overflow-wrap:anywhere}
+.session-modal .session-form .session-schedule input[type=date],.session-modal .session-form .session-schedule input[type=time]{width:100%;min-width:0;max-width:100%;min-height:48px}
+.session-modal .session-form .session-schedule input::-webkit-date-and-time-value{text-align:left;min-width:0}
+@container(max-width:380px){.session-time-grid{grid-template-columns:minmax(0,1fr);gap:16px}.session-course{grid-template-columns:7px minmax(0,1fr)}.session-course>small{grid-column:2;white-space:normal}}
+@media(max-width:760px){
+ .settings-modal .availability-form .form-grid{grid-template-columns:minmax(0,1fr)}
+ .modal{max-width:100%;min-width:0}.modal-heading{gap:12px;align-items:flex-start}.modal-heading h2{flex:1;line-height:1.25}.modal-heading>.icon-button{margin-top:0}
+ .edit-form .form-grid{grid-template-columns:minmax(0,1fr);gap:0}
+ .session-time-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+ .session-course{grid-template-columns:7px minmax(0,1fr)}.session-course>small{grid-column:2;white-space:normal;margin-top:-4px}
+ .session-modal .session-form .duration-control{grid-template-columns:44px minmax(48px,1fr) 20px 44px;gap:4px}
+ .session-modal .session-form .duration-control>button{width:44px;height:44px}
+ .native-row{min-width:0;max-width:100%;align-items:center}.native-row>span,.native-row>label{min-width:0;overflow-wrap:anywhere}.native-row>small{min-width:0;max-width:58%;overflow-wrap:anywhere;white-space:normal;text-align:right}
+ .mobile-detail .progress-row input{min-width:45px;width:auto;flex:1;max-width:120px}.mobile-detail .progress-row>small{flex:0 0 auto;max-width:none}
+ .color-picker{flex-wrap:wrap;max-width:100%}.detail-actions{flex-wrap:wrap;gap:10px}.detail-actions>button{white-space:normal}
+ .chat-toolbar{gap:10px;align-items:flex-start}.chat-toolbar>span{max-width:62%}.chat-toolbar>button{flex-shrink:0;max-width:38%;white-space:normal;text-align:right}
+ .chat-proposal dl{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:8px}.chat-proposal dd{min-width:0;overflow-wrap:anywhere}
+ .session-footer .primary{white-space:normal;line-height:1.4;min-height:48px}
+}
+
+.install-modal{width:440px}.install-app-icon{display:grid;place-items:center;width:70px;height:70px;border-radius:18px;background:#1675f8;color:#fff;margin:8px auto 20px}.install-modal>h3{text-align:center;font-size:23px;letter-spacing:-.8px}.install-summary{text-align:center;color:#8390a4;font-size:13px;margin:10px 0 24px;line-height:1.7}.install-native-button{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px}.install-platform{padding:16px;border:1px solid #e5eaf1;border-radius:12px;background:#f8fafc}.install-platform>strong{font-size:13px;color:#53627a}.install-platform p{font-size:12px;color:#8692a5;line-height:1.7;margin-top:9px}.install-platform b{color:#596e8c;font-weight:550}.install-footnote{text-align:center;font-size:10px;color:#a1a9b6;line-height:1.6;margin-top:20px}.install-open-link{display:block;text-align:center;font-size:12px;margin-top:17px}.install-status{display:flex;gap:8px;align-items:center;justify-content:center;font-size:13px;color:#4b9c7a;line-height:1.5}
+.session-modal .session-form .duration-control{grid-template-columns:40px minmax(0,1fr) 40px}
+.duration-value{display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;height:42px}
+.session-modal .session-form .duration-value>input:not([type=range]):not([type=color]){display:block;flex:0 1 6ch;width:6ch;min-width:0;max-width:calc(100% - 22px);height:40px;min-height:40px;margin:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;text-align:center;font-size:16px;line-height:normal;font-variant-numeric:tabular-nums}
+.duration-value>span{flex:0 0 auto;font-size:12px;color:#8a94a4;line-height:1;margin:0;padding:0}
+.edit-form input[type=number]{appearance:textfield;-moz-appearance:textfield}
+.edit-form input[type=number]::-webkit-inner-spin-button,.edit-form input[type=number]::-webkit-outer-spin-button{appearance:none;-webkit-appearance:none;margin:0}
+@media(max-width:760px){.session-modal .session-form .duration-control{grid-template-columns:44px minmax(0,1fr) 44px}.duration-value{height:44px}}
